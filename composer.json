@@ -1,0 +1,45 @@
+{
+  "name": "ice-php/tablelog",
+  "description": "将请求日志及操作日志记录到表中 ",
+  "keywords": [
+    "icePHP",
+    "table",
+    "log"
+  ],
+  "homepage": "https://github.com/ice-php/tablelog",
+  "type": "composer",
+  "license": "MIT",
+  "support": {
+    "source": "https://github.com/ice-php/tablelog"
+  },
+  "authors": [
+    {
+      "name": "blueice",
+      "email": "liyong@nenu.edu.cn"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "ice-php/table": "dev-master",
+    "ice-php/mvc": "dev-master",
+    "ice-php/page": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "files": [
+      "src/functions.php"
+    ],
+    "psr-4": {
+      "icePHP\\": "src"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org"
+    }
+  },
+  "config": {
+    "process-timeout": 1800
+  }
+}
