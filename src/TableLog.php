@@ -182,7 +182,6 @@ class TableLog extends Model
             'data' => json($data),
             'm' => self::$module
         ]);
-
     }
 
     /**
@@ -239,7 +238,7 @@ class TableLog extends Model
         }
 
         //查看是否在免记录名单中
-        $noLogs = configDefault([],'log', 'noLogRequest');
+        $noLogs = configDefault([], 'log', 'noLogRequest');
         if (in_array([self::$module, self::$controller, self::$action], $noLogs)) {
             return;
         }
