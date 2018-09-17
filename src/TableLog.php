@@ -107,7 +107,7 @@ class TableLog extends Model
      * @param $table string 操作的表名
      * @param $operation string 操作名称
      * @param $data mixed 要记录的数据
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     public static function db(string $table, string $operation, $data): void
     {
@@ -168,7 +168,7 @@ class TableLog extends Model
      * @param $table string 操作的表名
      * @param $operation string 操作类型
      * @param mixed $data 操作数据
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     public static function operation(string $title, string $table, string $operation, $data): void
     {
@@ -189,7 +189,7 @@ class TableLog extends Model
      * 记录调试日志
      * @param $title string 日志标题
      * @param $info mixed 日志内容
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     public static function debug(string $title, $info): void
     {
@@ -228,7 +228,7 @@ class TableLog extends Model
     /**
      * 记录系统 请求日志
      * @param $end bool 是否结束
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     public static function request(bool $end = false): void
     {
@@ -272,7 +272,7 @@ class TableLog extends Model
 
     /**
      * 请求结束时,记录耗费时间
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     private static function requestEnd(): void
     {
@@ -285,7 +285,7 @@ class TableLog extends Model
 
     /**
      * 创建三个日志表 logRequest,logOperation,logDebug
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     public static function createTable(): void
     {
@@ -396,7 +396,7 @@ class TableLog extends Model
      * @param $type string M
      * @return Result
      * @deprecated 尚未使用,以后查询日志时,可能使用
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     private static function pageOperation($ip, $type)
     {
@@ -426,7 +426,7 @@ class TableLog extends Model
      * @param $ip string ip
      * @return array
      * @deprecated 尚未使用,以后查询日志时,可能使用
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     private static function getRequestIdByIp($ip)
     {
@@ -440,7 +440,7 @@ class TableLog extends Model
      * @param $end string 结束时间
      * @return Result
      * @deprecated 尚未使用,以后查询日志时,可能使用
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     private static function pageRequest($belong, $begin, $end)
     {
@@ -475,7 +475,7 @@ class TableLog extends Model
      * 获取全部管理员列表,名称排序
      * @return Result
      * @deprecated 尚未使用,以后查询日志时,可能使用
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     static private function listAdminUsers()
     {
@@ -486,7 +486,7 @@ class TableLog extends Model
      * 获取全部管理员列表,名称排序
      * @return Result
      * @deprecated 尚未使用,以后查询日志时,可能使用
-     * @throws TableException|MysqlException
+     * @throws MysqlException
      */
     static private function listUsers()
     {
